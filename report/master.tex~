@@ -1,0 +1,29 @@
+\documentclass[uplatex,11pt,a4paper,dvipdfmx]{jsreport}
+\usepackage{docmute}
+\usepackage{mypackage}
+\mathtoolsset{showonlyrefs=true}    %%''true''or''fault''
+\begin{document}
+%%%%%%%タイトル%%%%%%%
+\input{title}
+\thispagestyle{empty}               %%ページ番号を空にする
+\clearpage                          %%新しいページの作成
+\restoregeometry                    %%余白の変更を元に戻す
+%%
+%%
+%%%%%%要旨・目次%%%%%%
+\pagenumbering{roman}           %%ページ番号をローマン体に
+\input{summary}
+\tableofcontents                    %%目次の作成
+\clearpage                          %%新しいページの作成
+%%
+%%%%%序文・本文%%%%%%%
+\pagenumbering{arabic}          %%ページ番号をアラビック体に
+\input{main1}
+\input{main2}
+%%
+\clearpage
+%%%%%%謝辞，参考文献%%%%%%%%
+\pagenumbering{roman}           %%ページ番号をローマン体に
+\input{reference}
+%%
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass[dvipdfmx]{jreport}
+\usepackage{docmute}
+\usepackage{mypackage}
+\begin{document}
+%%%%%%%タイトル%%%%%%%
+\input{title}
+\thispagestyle{empty}               %%ページ番号を空にする
+\clearpage                          %%新しいページの作成
+\restoregeometry                    %%余白の変更を元に戻す
+%%
+%%
+%%%%%%要旨・目次%%%%%%
+\pagenumbering{roman}           %%ページ番号をローマン体に
+\input{summary}
+\tableofcontents                    %%目次の作成
+\clearpage                          %%新しいページの作成
+%%
+%%%%%序文・本文%%%%%%%
+\pagenumbering{arabic}          %%ページ番号をアラビック体に
+\input{main1}
+\input{main2}
+\input{main3}
+\input{main4}
+\input{main5}
+\input{main6}
+\input{main7}
+\clearpage
+%%
+%%%%%%謝辞，参考文献%%%%%%%%
+\pagenumbering{roman}           %%ページ番号をローマン体に
+\input{reference}
+%%
+\end{document}
